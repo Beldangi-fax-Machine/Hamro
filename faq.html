@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - LeftOvr AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <div class="logo-icon">
+                        <img src="icon.png" alt="LeftOvr Icon">
+                    </div>
+                    <span class="logo-text">LeftOvr</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Email Support</a></li>
+                    <li><a href="https://github.com/leftovr/leftovr/releases" class="download-btn">Download</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="faq-section">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            
+            <div class="search-container">
+                <input type="text" id="faq-search" placeholder="Search for questions..." class="search-input">
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is LeftOvr AI?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>LeftOvr AI is an intelligent kitchen companion that helps you transform leftover ingredients into delicious meals. Our app uses advanced AI technology to recognize ingredients in your kitchen and suggest creative recipes based on what you have available.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the Kitchen Scan feature work?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kitchen Scan uses your device's camera to take photos of your kitchen ingredients. Our AI technology then identifies the ingredients in the image and adds them to your virtual pantry. All image processing happens locally on your device for privacy.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is Chef AI and how does it work?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Chef AI is our intelligent recipe generator that analyzes your available ingredients and suggests personalized recipes. It considers your dietary preferences, cooking skill level, and available equipment to recommend recipes that you can make with what you have.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my data private and secure?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we take your privacy seriously. All image processing is done locally on your device. We only collect minimal data necessary to improve our service, and we never sell your information to third parties. For more details, please see our <a href="privacy.html">Privacy Policy</a>.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What platforms is LeftOvr AI available on?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>LeftOvr AI is currently available for Windows, macOS, and Linux. Mobile versions for iOS and Android are coming soon.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I update the app?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The app will automatically check for updates when you launch it. You can also manually check for updates in the settings menu. New versions are also available on our <a href="https://github.com/leftovr/leftovr/releases">GitHub releases page</a>.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I customize my dietary preferences?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can set your dietary preferences, allergies, and restrictions in the app settings. Chef AI will then tailor recipe suggestions to match your preferences.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is there a limit to how many ingredients I can scan?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, there is no limit to how many ingredients you can scan. You can scan your entire kitchen, pantry, or refrigerator, and the app will keep track of all your ingredients.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-support">
+                <h2>Still have questions?</h2>
+                <p>Our support team is here to help you with any questions or issues you may have.</p>
+                <div style="text-align: center;">
+                    <a href="contact.html" class="btn">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 LeftOvr AI</p>
+            <div class="footer-links">
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = question.querySelector('.toggle-icon');
+                
+                // Toggle active class
+                faqItem.classList.toggle('active');
+                
+                // Toggle icon
+                if (faqItem.classList.contains('active')) {
+                    icon.textContent = '-';
+                } else {
+                    icon.textContent = '+';
+                }
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('faq-search');
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

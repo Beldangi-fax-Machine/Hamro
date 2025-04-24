@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Ovr Ai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="icon.png" alt="LeftOvr Icon">
+                </div>
+                <span class="logo-text">LeftOvr</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Email Support</a></li>
+                    <li><a href="https://github.com/leftovr/leftovr/releases" class="download-btn">Download</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Create new meals with just one click</h2>
+                    <p>Welcome to LeftOvr.AI, your intelligent kitchen companion. Our innovative app helps you transform leftover ingredients into delicious meals, reducing food waste while discovering new culinary possibilities. With our advanced AI technology, you'll never wonder what to cook again.</p>
+                    <div class="download-button-container">
+                        <a href="https://github.com/leftovr/leftovr/releases">
+                            <img src="downloadwithapple.png" alt="Download with Apple" class="download-with-apple">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-images">
+                    <div class="phone-image">
+                        <img src="iphoneinfo1.png" alt="LeftOvr.AI App Screenshot 1">
+                    </div>
+                    <div class="phone-image">
+                        <img src="iphoneinfo2.png" alt="LeftOvr.AI App Screenshot 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>"LeftOvr.AI has completely transformed how I cook. I used to throw away so much food, but now I can create delicious meals with ingredients I already have!"</p>
+                        <div class="testimonial-author">- Sarah J.</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The recipe suggestions are amazing. I've discovered so many new dishes I never would have tried otherwise. This app has made cooking fun again!"</p>
+                        <div class="testimonial-author">- Michael T.</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a busy parent, this app has been a game-changer for meal planning. I can quickly scan my kitchen and get recipe ideas for the whole week."</p>
+                        <div class="testimonial-author">- Lisa R.</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The ingredient recognition is incredibly accurate. It even identified obscure spices in my pantry that I had forgotten about!"</p>
+                        <div class="testimonial-author">- David M.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>How LeftOvr AI Works</h2>
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Kitchen Scan</h3>
+                        <p>Simply take a photo of your kitchen ingredients, and our AI will instantly recognize what you have available. No manual input needed - just point, shoot, and let our technology do the work.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="infocard1.png" alt="Kitchen Scan Feature">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Chef AI</h3>
+                        <p>Our intelligent chef analyzes your available ingredients and suggests creative recipes tailored to your preferences. Get personalized meal ideas that make the most of what you have.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="infocard2.png" alt="Chef AI Feature">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to Transform Your Kitchen?</h2>
+                <p>Download LeftOvr AI today and start reducing food waste while discovering new recipes.</p>
+                <div class="download-button-container">
+                    <a href="https://github.com/leftovr/leftovr/releases">
+                        <img src="downloadwithapple.png" alt="Download with Apple" class="download-with-apple">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 LeftOvr AI</p>
+            <div class="footer-links">
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Testimonial carousel functionality
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        let currentIndex = 0;
+        let interval;
+
+        function showTestimonial(index) {
+            // Remove active classes
+            testimonialCards.forEach(card => {
+                card.classList.remove('active', 'previous');
+            });
+
+            // Add active classes
+            testimonialCards[index].classList.add('active');
+
+            // Add previous class to the previous card
+            const previousIndex = (index - 1 + testimonialCards.length) % testimonialCards.length;
+            testimonialCards[previousIndex].classList.add('previous');
+        }
+
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % testimonialCards.length;
+            showTestimonial(currentIndex);
+        }
+
+        // Initialize the carousel
+        showTestimonial(0);
+
+        // Start automatic rotation
+        interval = setInterval(nextTestimonial, 5000);
+    </script>
+</body>
+</html> 
